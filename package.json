@@ -1,0 +1,9 @@
+{
+   "name": "touch",
+   "description": "touching is nice",
+   "author": "tuffylock <tuffylock@gmail.com>",
+   "dependencies" : {
+      "express": "4.x",
+      "socket.io": "*"
+   }
+}
