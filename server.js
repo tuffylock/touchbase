@@ -19,7 +19,7 @@ var line_history = [];
 io.on('connection', function (socket) {
 
   // catch client up on drawings from before they arrived
-  for (var i in line_history) {
+  for (var i = line_history.length; i >= 0; i--) {
     socket.emit('draw_line', { line: line_history[i] });
   }
 
