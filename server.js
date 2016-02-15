@@ -5,12 +5,14 @@ var socketIo = require('socket.io');
 
 var app = express();
 
+var port = process.env.PORT || 5000;
+
 // start server on port 8080
 var server = http.createServer(app);
 var io = socketIo.listen(server);
-server.listen(8080);
+server.listen(port);
 app.use(express.static(__dirname + '/'));
-console.log('Server running on 127.0.0.1:8080');
+console.log('Server running on ' + port);
 
 
 var line_history = [];
