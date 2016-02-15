@@ -10,16 +10,15 @@ var server = http.createServer(app);
 var io = socketIo.listen(server);
 server.listen(8080);
 app.use(express.static(__dirname + '/'));
-console.log("Server running on 127.0.0.1:8080");
+console.log('Server running on 127.0.0.1:8080');
 
 
 var line_history = [];
 
 // when new client connects
 io.on('connection', function (socket) {
-
   // catch client up on drawings from before they arrived
-  for (var i = line_history.length; i >= 0; i--) {
+  for (var i = 0, lines = line_history.length; i < lines; i++) {
     socket.emit('draw_line', { line: line_history[i] });
   }
 
