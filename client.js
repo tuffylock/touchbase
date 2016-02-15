@@ -1,5 +1,5 @@
 // wait for page to load
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
   var mouse = {
     click: false,
     move: false,
@@ -57,4 +57,4 @@ window.onload = function () {
   }
 
   mainLoop();
-}
+})
