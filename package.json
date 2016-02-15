@@ -4,7 +4,7 @@
    "author": "tuffylock <tuffylock@gmail.com>",
    "version": "1.0.0",
    "engines": {
-     "node": "4.1.1"
+     "node": "5.1.0"
      },
    "dependencies" : {
       "express": "4.x",
